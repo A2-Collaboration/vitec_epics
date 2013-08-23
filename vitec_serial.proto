@@ -1,0 +1,43 @@
+#
+#  @brief EPICS Stream device protocol file.
+#         Reads messages from the VITEC ardrino's serial link
+#  @author Oliver Steffen <steffen@kph.uni-mainz.de>
+#  @date   Aug 22, 2013
+#
+
+# set UNIX line termination
+terminator = CR LF;
+
+readtimeout = 2000;
+
+ExtraInput = Ignore;
+
+
+
+read_VP5 {
+	in "VoltageP5V:%f";
+}
+
+read_VP12 {
+	in "VoltageP12V:%f";
+}
+
+read_VN12 {
+	in "VoltageN12V:%f";
+}
+
+read_VP3V3 {
+	in "VoltageP3V3:%f";
+}
+
+read_VP2V5 {
+	in "VoltageP2V5:%f";
+}
+
+read_VP1V2 {
+	in "VoltageP1V2:%f";
+}
+
+read_Temp {
+	in "AirTemp:%f";
+}

@@ -1,0 +1,77 @@
+#
+#  @brief EPICS record database for VITEC status values
+#  @autor Oliver Steffen <steffen@kph.uni-mainz.de>
+#  @date Aug 22, 2013
+#  @param BOX host name of the machine taking care of the VITEC card
+#  @param DEV device name. Usually "VITEC"
+#
+
+record (ai, "$(BOX):$(DEV):VP5")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VP5 $(DEV)")
+	field(SCAN, "I/O Intr")
+	field (DESC, "+5 Volt supply of VITEC")
+	field (LINR, "LINEAR")
+	field (EGU, "V")
+}
+
+record (ai, "$(BOX):$(DEV):VP12")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VP12 $(DEV)")
+	field (SCAN, "I/O Intr")
+	field (DESC, "+12 Volt supply of VITEC")
+	field (LINR, "LINEAR")
+	field (EGU,  "V")
+}
+
+record (ai, "$(BOX):$(DEV):VN12")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VN12 $(DEV)")
+	field (SCAN, "I/O Intr")
+	field (DESC, "-12 Volt supply of VITEC")
+	field (LINR, "LINEAR")
+	field (EGU,  "V")
+}
+
+record (ai, "$(BOX):$(DEV):VP3V3")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VP3V3 $(DEV)")
+	field(SCAN, "I/O Intr")
+	field (DESC, "+3 Volt supply of VITEC ?")
+	field (LINR, "LINEAR")
+	field (EGU,  "V")
+}
+
+record (ai, "$(BOX):$(DEV):VP2V5")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VP2V5 $(DEV)")
+	field(SCAN, "I/O Intr")
+	field (DESC, "+5 Volt supply of VITEC ?")
+	field (LINR, "LINEAR")
+	field (EGU,  "V")
+}
+
+record (ai, "$(BOX):$(DEV):VP1V2")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_VP1V2 $(DEV)")
+	field(SCAN, "I/O Intr")
+	field (DESC, "+? Volt supply of VITEC ?")
+	field (LINR, "LINEAR")
+	field (EGU,  "V")
+}
+
+record (ai, "$(BOX):$(DEV):Temp")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_Temp $(DEV)")
+	field(SCAN, "I/O Intr")
+	field (DESC, "Temperature of VITEC")
+	field (LINR, "LINEAR")
+	field (EGU,  "Deg Celcius")
+}
