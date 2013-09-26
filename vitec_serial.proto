@@ -23,7 +23,7 @@ read_VP12 {
 }
 
 read_VN12 {
-	in "VoltageN12V:%f";
+	in "VoltageM12V:%f";
 }
 
 read_VP3V3 {
