@@ -11,7 +11,7 @@ asynSetOption ("VITEC", 0, "bits", "8")
 asynSetOption ("VITEC", 0, "parity", "none")
 asynSetOption ("VITEC", 0, "stop", "1")
 
-dbLoadRecords "vitec.db","PROTO=vitec_serial.proto,DEV=VITEC,BOX=a2wcdaq1b"
+dbLoadRecords "vitec.db","PROTO=vitec_serial.proto,DEV=VITEC,BOX=$(HOSTNAME)"
 
 iocInit
 
