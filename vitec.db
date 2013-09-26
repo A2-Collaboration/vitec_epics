@@ -14,6 +14,10 @@ record (ai, "$(BOX):$(DEV):VP5")
 	field (DESC, "+5 Volt supply of VITEC")
 	field (LINR, "LINEAR")
 	field (EGU, "V")
+        field (LOPR, 0)
+        field (HOPR, 10)
+        field (LOW, 4.5)
+        field (HIGH, 5.5)
 }
 
 record (ai, "$(BOX):$(DEV):VP12")
@@ -24,6 +28,8 @@ record (ai, "$(BOX):$(DEV):VP12")
 	field (DESC, "+12 Volt supply of VITEC")
 	field (LINR, "LINEAR")
 	field (EGU,  "V")
+        field (LOPR, 0)
+        field (HOPR, 24)
 }
 
 record (ai, "$(BOX):$(DEV):VN12")
@@ -34,6 +40,8 @@ record (ai, "$(BOX):$(DEV):VN12")
 	field (DESC, "-12 Volt supply of VITEC")
 	field (LINR, "LINEAR")
 	field (EGU,  "V")
+        field (LOPR, 0)
+        field (HOPR, 24)
 }
 
 record (ai, "$(BOX):$(DEV):VP3V3")
@@ -44,6 +52,8 @@ record (ai, "$(BOX):$(DEV):VP3V3")
 	field (DESC, "+3 Volt supply of VITEC ?")
 	field (LINR, "LINEAR")
 	field (EGU,  "V")
+        field (LOPR, 0)
+        field (HOPR, 5)
 }
 
 record (ai, "$(BOX):$(DEV):VP2V5")
@@ -54,6 +64,8 @@ record (ai, "$(BOX):$(DEV):VP2V5")
 	field (DESC, "+5 Volt supply of VITEC ?")
 	field (LINR, "LINEAR")
 	field (EGU,  "V")
+        field (LOPR, 0)
+        field (HOPR, 5)
 }
 
 record (ai, "$(BOX):$(DEV):VP1V2")
@@ -64,6 +76,8 @@ record (ai, "$(BOX):$(DEV):VP1V2")
 	field (DESC, "+? Volt supply of VITEC ?")
 	field (LINR, "LINEAR")
 	field (EGU,  "V")
+        field (LOPR, 0)
+        field (HOPR, 2.5)
 }
 
 record (ai, "$(BOX):$(DEV):Temp")
@@ -73,5 +87,7 @@ record (ai, "$(BOX):$(DEV):Temp")
 	field(SCAN, "I/O Intr")
 	field (DESC, "Temperature of VITEC")
 	field (LINR, "LINEAR")
-	field (EGU,  "Deg Celcius")
+	field (EGU,  "° C")
+        field (LOPR, 0)
+        field (HOPR, 50)
 }
