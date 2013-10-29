@@ -15,4 +15,6 @@ dbLoadRecords "vitec.db","PROTO=vitec_serial.proto,DEV=VITEC,BOX=$(HOSTNAME)"
 
 iocInit
 
-#var streamDebug 1
+# Dump record list
+dbl > "/tmp/ioc/$(HOSTNAME)_vitec"
+
