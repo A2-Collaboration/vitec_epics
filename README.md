@@ -1,4 +1,4 @@
-A2 VIETEC EPICS IOC
+A2 VITEC EPICS IOC
 ===================
 
 This ioc uses the EPICS StreamApp to read voltages and temperature
