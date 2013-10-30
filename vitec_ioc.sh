@@ -40,9 +40,11 @@ case $HOSTNAME in
         exit 1
 esac
 
-cd /opt/epics/apps/vitec
+# setup the EPICS environment
+. /opt/epics/thisEPICS.sh
 
+# launch the screen
+cd /opt/epics/apps/vitec
 PREFIX=$PREFIX screen -dm -S VITEC -c screenrc
 
 echo "Screen session with name VITEC started."
-
