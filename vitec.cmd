@@ -11,10 +11,10 @@ asynSetOption ("VITEC", 0, "bits", "8")
 asynSetOption ("VITEC", 0, "parity", "none")
 asynSetOption ("VITEC", 0, "stop", "1")
 
-dbLoadRecords "vitec.db","PROTO=vitec_serial.proto,DEV=VITEC,BOX=$(HOSTNAME)"
+# this PREFIX is set in vitec_ioc.sh (same folder as this cmd file)
+dbLoadRecords "vitec.db","PROTO=vitec_serial.proto,PREFIX=$(PREFIX)"
 
 iocInit
 
 # Dump record list
-dbl > "/tmp/ioc/$(HOSTNAME)_vitec"
-
+dbl > "/tmp/ioc/vitec"
